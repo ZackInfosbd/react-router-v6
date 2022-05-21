@@ -9,10 +9,11 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="products" element={<Products />} />
-        <Route path="*" element={<Error />} />
+        <Route path="/" element={<Home />}>
+          <Route path="about" element={<About />} />
+          <Route path="products" element={<Products />} />
+          <Route path="*" element={<Error />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
@@ -22,4 +23,6 @@ export default App;
 
 /**
  * you can wrapp all the app with BrowserRouter in index
+ * whatever is the parent route, and even with nested route wil be ridirected to that parent route as long as you add more logic to fix this behaviour.
+ *
  */

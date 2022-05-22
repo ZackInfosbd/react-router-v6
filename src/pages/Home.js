@@ -1,14 +1,10 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
 const Home = () => {
   return (
     <React.Fragment>
-      <Navbar />
-      <section className="section">
-        <Outlet />
-      </section>
+      <h2>home page</h2>
     </React.Fragment>
   );
 };
